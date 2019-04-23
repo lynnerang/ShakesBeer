@@ -17,10 +17,10 @@ describe('Autocomplete', () => {
       )
 
   });
-  it('Should match the snapshot', () => {
+  it.skip('Should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-  it('Should have default state', () => {
+  it.skip('Should have default state', () => {
         expect(wrapper.state()).toEqual(
             {
                 activeSuggestion: 0,

@@ -148,15 +148,12 @@ class ResultsPage extends Component {
 
   updateStarredList = (id, change) => {
     let list = this.state.starredBreweries;
-    console.log(list.indexOf(list.find(obj => obj.id === id)));
-
     if (change === 'add') {
       list.push(id)
     } else {
       const matchingIndex = list.indexOf(list.find(obj => obj.id === id));
       list.splice(matchingIndex, 1);
     }
-
     this.setState({starredBreweries: list}, () => {
       localStorage.setItem('userStarredList', JSON.stringify(this.state.starredBreweries))
     });
@@ -165,7 +162,7 @@ class ResultsPage extends Component {
   filterByStarred = () => {
     if (this.state.viewingStarred === true) {
       let filterResults = this.state.filteredBreweries.filter(brewery => {
-        return this.state.starredBreweries.includes(brewery.id);
+        return this.state.starredBreweries.includes(brewery.FIELD1);
       })
       this.setState({filteredBreweries: filterResults})
     }
@@ -179,8 +176,7 @@ class ResultsPage extends Component {
     const beerCount = this.state.filteredBreweries.reduce((sum, brewery) => {
       sum += brewery.beers.length;
       return sum;
-    }, 0)
-    
+    }, 0)    
     return (
       <div className='results-page'>
         <header>

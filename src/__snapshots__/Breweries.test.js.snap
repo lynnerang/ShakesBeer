@@ -9,9 +9,11 @@ exports[`Breweries Should match the snapshot 1`] = `
   >
     <i
       className="far fa-star"
+      id="star-filler"
       onClick={[Function]}
     />
     <h2
+      className="brewery-name"
       onClick={[Function]}
     >
       The Lion Brewery

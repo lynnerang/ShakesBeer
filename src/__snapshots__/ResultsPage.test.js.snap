@@ -1,3 +1,191 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ResultsPage Should match the snapshot 1`] = `undefined`;
+
+exports[`ResultsPage Should match the snapshot 1`] = `
+<div
+  className="results-page"
+>
+  <header>
+    <i
+      className="fas fa-arrow-left"
+      onClick={[Function]}
+    />
+    <img
+      alt="shakesbeer logo"
+      className="logo"
+      src="shakesbeerlogosmall.png"
+    />
+    <h1
+      className="results-header"
+    >
+      ShakesBeer
+    </h1>
+  </header>
+  <main>
+    <div
+      className="brewery-list-header"
+    >
+      <img
+        alt="state flag"
+        className="flag"
+        src="pennsylvania.png"
+      />
+      <h2
+        className="state-subheading"
+      >
+        Pennsylvania
+         Brewery List
+      </h2>
+      <img
+        alt="state flag"
+        className="flag"
+        src="pennsylvania.png"
+      />
+    </div>
+    <div
+      className="brew-cards"
+    >
+      <Controls
+        beerIbus={
+          Array [
+            "20-29",
+          ]
+        }
+        beerStyles={
+          Array [
+            "American Amber / Red Ale",
+            "American Black Ale",
+            "American Blonde Ale",
+            "American Brown Ale",
+          ]
+        }
+        breweryCities={
+          Array [
+            "Wilkes-Barre",
+          ]
+        }
+        toggleStarView={[Function]}
+        updateFilterSelection={[Function]}
+      />
+      <p
+        className="results-count"
+      >
+        Viewing 
+        1
+         breweries with 
+        4
+         beers
+      </p>
+      <BreweryList
+        dataset={
+          Array [
+            Object {
+              "FIELD1": 90,
+              "beers": Array [
+                Object {
+                  "FIELD1": 43,
+                  "abv": 0.045,
+                  "brewery_id": 60,
+                  "ibu": 18,
+                  "id": 2544,
+                  "name": "Send Help",
+                  "ounces": 12,
+                  "style": "American Blonde Ale",
+                },
+                Object {
+                  "FIELD1": 44,
+                  "abv": 0.055,
+                  "brewery_id": 60,
+                  "ibu": null,
+                  "id": 2324,
+                  "name": "Cast Iron Oatmeal Brown",
+                  "ounces": 12,
+                  "style": "American Brown Ale",
+                },
+                Object {
+                  "FIELD1": 45,
+                  "abv": 0.06,
+                  "brewery_id": 60,
+                  "ibu": null,
+                  "id": 2288,
+                  "name": "Reprise Centennial Red",
+                  "ounces": 12,
+                  "style": "American Amber / Red Ale",
+                },
+                Object {
+                  "FIELD1": 46,
+                  "abv": 0.055,
+                  "brewery_id": 60,
+                  "ibu": null,
+                  "id": 2287,
+                  "name": "Alter Ego",
+                  "ounces": 12,
+                  "style": "American Black Ale",
+                },
+              ],
+              "city": "Wilkes-Barre",
+              "name": "The Lion Brewery",
+              "state": "Pennsylvania",
+            },
+          ]
+        }
+        filteredBreweries={
+          Array [
+            Object {
+              "FIELD1": 90,
+              "beers": Array [
+                Object {
+                  "FIELD1": 43,
+                  "abv": 0.045,
+                  "brewery_id": 60,
+                  "ibu": 18,
+                  "id": 2544,
+                  "name": "Send Help",
+                  "ounces": 12,
+                  "style": "American Blonde Ale",
+                },
+                Object {
+                  "FIELD1": 44,
+                  "abv": 0.055,
+                  "brewery_id": 60,
+                  "ibu": null,
+                  "id": 2324,
+                  "name": "Cast Iron Oatmeal Brown",
+                  "ounces": 12,
+                  "style": "American Brown Ale",
+                },
+                Object {
+                  "FIELD1": 45,
+                  "abv": 0.06,
+                  "brewery_id": 60,
+                  "ibu": null,
+                  "id": 2288,
+                  "name": "Reprise Centennial Red",
+                  "ounces": 12,
+                  "style": "American Amber / Red Ale",
+                },
+                Object {
+                  "FIELD1": 46,
+                  "abv": 0.055,
+                  "brewery_id": 60,
+                  "ibu": null,
+                  "id": 2287,
+                  "name": "Alter Ego",
+                  "ounces": 12,
+                  "style": "American Black Ale",
+                },
+              ],
+              "city": "Wilkes-Barre",
+              "name": "The Lion Brewery",
+              "state": "Pennsylvania",
+            },
+          ]
+        }
+        starredBreweries={Array []}
+        updateStarredList={[Function]}
+      />
+    </div>
+  </main>
+</div>
+`;
+

@@ -16,7 +16,10 @@ exports[`WelcomePage Should match the snapshot 1`] = `
       chooseState={[MockFunction]}
       usStates={
         Array [
-          undefined,
+          1,
+          2,
+          3,
+          4,
         ]
       }
     />

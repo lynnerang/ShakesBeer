@@ -23,7 +23,7 @@ class Breweries extends Component {
 
   getBeers = () => {
     let match = this.props.dataset.find(brewery => {
-      return this.props.id === brewery.id;
+      return this.props.id === brewery.FIELD1;
     });
     let beers = match && match.beers ? match.beers : null;
     this.setState({beerList: beers});
@@ -43,8 +43,8 @@ class Breweries extends Component {
     return (
       <div className='brewery-label'>
         <div className='brewery-header'>
-          <i className={favClass} onClick={this.toggleFavorite}></i>
-          <h2 onClick={this.toggleBeerList}>{this.props.name}</h2>
+          <i className={favClass} id='star-filler' onClick={this.toggleFavorite}></i>
+          <h2 className='brewery-name' onClick={this.toggleBeerList}>{this.props.name}</h2>
         </div>
         <div className='beer-dropdown hidden'>
         {

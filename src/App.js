@@ -12,7 +12,8 @@ class App extends Component {
       breweries: [],
       dataset: [],
       selectedState: '',
-      showWelcomeScreen: true
+      showWelcomeScreen: true,
+      usStates: []
     }
   }
 
@@ -41,7 +42,19 @@ class App extends Component {
       });
       return acc;
     }, []);
-    this.setState({ dataset: data});
+    this.setState({ dataset: data}, () => {
+      this.filterStates()
+    });
+  }
+
+  filterStates = () => {
+    let orderedStates = this.state.dataset.reduce((acc, brewery) => {
+      if(!acc.includes(brewery.state)) {
+        acc.push(brewery.state)
+      }
+      return acc;
+    }, []);
+    this.setState({usStates: orderedStates})
   }
 
   chooseState = (e) => {
@@ -55,7 +68,7 @@ class App extends Component {
     if (this.state.beers.length === 0 || this.state.breweries.length === 0) {
       page = <div className='loading-page'><img className='loading' src={spinner} alt='loading icon'/></div>
     } else if (this.state.showWelcomeScreen) {
-      page = <WelcomePage dataset={this.state.dataset} 
+      page = <WelcomePage dataset={this.state.usStates} 
                           chooseState={this.chooseState} />
     } else {
       page = <ResultsPage selectedState={this.state.selectedState} 

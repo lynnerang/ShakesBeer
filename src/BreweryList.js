@@ -8,7 +8,7 @@ function BreweryList(props) {
         props.filteredBreweries.map((brewery, index) => {
           return (
             <Breweries name={brewery.name}
-                       id={brewery.id}
+                       id={brewery.FIELD1}
                        dataset={props.dataset}
                        starredBreweries={props.starredBreweries}
                        updateStarredList={props.updateStarredList}
